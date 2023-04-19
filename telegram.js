@@ -44,12 +44,15 @@ bot.onText(/\/doomer (.+)/, async (msg, match) => {
     ];
 
     const index = Math.floor(Math.random() * responses.length);
-
+    /*
+// NO INITIAL MESSAGE FOR NOW
     bot.sendMessage(msg.chat.id, responses[index], {
       reply_to_message_id: msg.message_id,
       parse_mode: "Markdown",
       disable_web_page_preview: true,
     });
+
+     */
 
     console.log("got doomer");
     var slashCommand = getCommand(msg.text);
