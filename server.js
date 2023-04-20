@@ -108,6 +108,9 @@ var processText = async function (text, randomId, model, userId, platform) {
     voiceId = "dfl1AVvQ5uzRWnyU25sv";
   }
 
+  console.log("check text");
+  console.log(text);
+
   const url = `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`;
   const data = {
     text: basePrompt,
