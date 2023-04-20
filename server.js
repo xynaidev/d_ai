@@ -63,8 +63,9 @@ var doomer = async function (prompt, model, userId, platform, username) {
         best_of: 3,
         frequency_penalty: 0.59,
         presence_penalty: 0.93,
-        stop: [" Human:", " AI:", " Doomer:", "\nDoomer"],
       });
+
+      //        stop: [" Human:", " AI:", " Doomer:", "\nDoomer"],
 
       console.log("check doomer output");
       console.log(response.data);
