@@ -158,7 +158,7 @@ var processText = async function (text, randomId, model, userId, platform) {
     console.error(error);
     status = false;
     filename = false;
-    serverComment = "❌ Server overloaded or offline";
+    serverComment = "It's over";
     return [status, filename, serverComment];
   }
   return [status, filename, serverComment];
