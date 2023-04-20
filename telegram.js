@@ -80,7 +80,8 @@ bot.onText(/\/doomer (.+)/, async (msg, match) => {
       newPrompt,
       model,
       userId,
-      "telegram"
+      "telegram",
+      username
     );
 
     if (status == false) {
