@@ -107,8 +107,8 @@ var processText = async function (text, randomId, model, userId, platform) {
   var filename;
   var serverComment;
 
-  var balanceValue = 1;
-  var clarityValue = 1;
+  var balanceValue = 0.94;
+  var clarityValue = 0.96;
   var basePrompt = text;
 
   console.log("model: ", model);
