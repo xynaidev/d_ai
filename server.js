@@ -61,7 +61,7 @@ var doomer = async function (prompt, model, userId, platform, username) {
         best_of: 3,
         frequency_penalty: 0.59,
         presence_penalty: 0.93,
-        stop: [" Human:", " AI:", " Doomer:"],
+        stop: [" Human:", " AI:", " Doomer:", "\nDoomer"],
       });
 
       console.log("check doomer output");
@@ -73,9 +73,13 @@ var doomer = async function (prompt, model, userId, platform, username) {
         aiText = false;
       } else {
         returnText = response.data.choices[0].text;
+        if (returnText == "\nDoomer") {
+          aiText = "it's over";
+        } else {
+          aiText = returnText.split("AI:")[1];
+        }
         status = true;
         serverComment = "";
-        aiText = returnText.split("AI:")[1];
       }
 
       console.log("check text");
