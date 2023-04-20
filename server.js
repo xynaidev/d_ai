@@ -56,12 +56,12 @@ var doomer = async function (prompt, model, userId, platform, username) {
           
           \n Human: ${prompt} \n`,
         temperature: 1,
-        max_tokens: 2469,
+        max_tokens: 3469,
         top_p: 1,
         best_of: 3,
         frequency_penalty: 0.59,
         presence_penalty: 0.93,
-        stop: [" Human:", " AI:"],
+        stop: [" Human:", " AI:", " Doomer:"],
       });
 
       console.log("check doomer output");
