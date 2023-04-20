@@ -116,7 +116,7 @@ var processText = async function (text, randomId, model, userId, platform) {
   var voiceId;
 
   if (model === "/doomer") {
-    voiceId = "dfl1AVvQ5uzRWnyU25sv";
+    voiceId = "2ffvTZSCBNbItrn7Ps8A";
   }
 
   const url = `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`;
