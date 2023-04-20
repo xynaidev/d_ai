@@ -74,11 +74,10 @@ var doomer = async function (prompt, model, userId, platform, username) {
         serverComment = "Server is doomed";
         aiText = false;
       } else {
-        returnText = response.data.choices[0].text;
-        if (returnText == "\nDoomer") {
+        if (response.data.choices[0].text == "\nDoomer") {
           aiText = "it's over";
         } else {
-          aiText = returnText.split("AI:")[1];
+          aiText = response.data.choices[0].text;
         }
         status = true;
         serverComment = "";
