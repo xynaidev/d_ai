@@ -60,7 +60,6 @@ var doomer = async function (prompt, model, userId, platform, username) {
         temperature: 1,
         max_tokens: 2469,
         top_p: 1,
-        best_of: 3,
         frequency_penalty: 0.59,
         presence_penalty: 0.93,
       });
