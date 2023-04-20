@@ -9,6 +9,9 @@ const ELEVENLABS_API_KEY = process.env.ELEVENLABS_API_KEY;
 
 var doomer = async function (prompt, model, userId, platform, username) {
   try {
+    if (typeof username === "undefined") {
+      username = "Joe";
+    }
     if (model === "doomer") {
       const configuration = new Configuration({
         organization: OPENAI_ORGANIZATION_ID,
