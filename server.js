@@ -56,7 +56,7 @@ var doomer = async function (prompt, model, userId, platform, username) {
           
           \n Human: ${prompt} \n`,
         temperature: 1,
-        max_tokens: 3469,
+        max_tokens: 2469,
         top_p: 1,
         best_of: 3,
         frequency_penalty: 0.59,
