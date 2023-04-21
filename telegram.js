@@ -95,7 +95,7 @@ bot.onText(/\/doomer (.+)/, async (msg, match) => {
       const randomIndex = Math.floor(Math.random() * randomAnswers.length);
 
       // Select a random string from the array
-      const randomAnswer = strings[randomIndex];
+      const randomAnswer = randomAnswers[randomIndex];
       // get voice
       var [status, filename, serverComment] = await server.processText(
         randomAnswer,
