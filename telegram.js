@@ -75,50 +75,101 @@ bot.onText(/\/doomer (.+)/, async (msg, match) => {
     const userLinked = `tg://user?id=${userId}`;
     const userLinkedText = `[@${username}]` + `(${userLinked})`;
 
-    // get text
-    var [status, aiText, serverComment] = await server.doomer(
-      newPrompt,
-      model,
-      userId,
-      "telegram",
-      username
-    );
+    // Generate a random number between 1 and 10
+    const randomNumber = Math.floor(Math.random() * 80) + 1;
 
-    if (status == false) {
-      bot.sendMessage(msg.chat.id, serverComment, {
-        reply_to_message_id: msg.message_id,
-        parse_mode: "Markdown",
-        disable_web_page_preview: true,
-      });
-      return;
-    }
+    //sometimes doomer reminds people to shill instead of keep asking questions
+    if ((randomNumber = 5)) {
+      // reminder to shill
 
-    // get voice
+      // array of possible answers
+      const randomAnswers = [
+        "instead of keep asking me mundane questions, why don't you go bump our 4chan thread or shill DOOME on social media",
+        "I will only answer this question after you shilled DOOMER to at least one other person or bumped a 4chan thread about doomer",
+        "I would like to answer this, but instead I'm taking out the freedom to urge you to shill DOOMER to your friends and family",
+        "right now I'm not really feeling like answering this. why don't you instead go shill DOOMER somewhere?",
+        "pee pee poo poo",
+      ];
 
-    var [status, filename, serverComment] = await server.processText(
-      aiText,
-      randomId,
-      slashCommand,
-      userId,
-      "telegram"
-    );
+      // Generate a random index
+      const randomIndex = Math.floor(Math.random() * strings.length);
 
-    console.log("check");
-    console.log(status);
-    console.log(serverComment);
+      // Select a random string from the array
+      const randomAnswer = strings[randomIndex];
+      // get voice
+      var [status, filename, serverComment] = await server.processText(
+        randomAnswer,
+        randomId,
+        slashCommand,
+        userId,
+        "telegram"
+      );
 
-    if (status == false) {
-      bot.sendMessage(msg.chat.id, serverComment, {
-        reply_to_message_id: msg.message_id,
-        parse_mode: "Markdown",
-        disable_web_page_preview: true,
-      });
+      console.log("check");
+      console.log(status);
+      console.log(serverComment);
+
+      if (status == false) {
+        bot.sendMessage(msg.chat.id, serverComment, {
+          reply_to_message_id: msg.message_id,
+          parse_mode: "Markdown",
+          disable_web_page_preview: true,
+        });
+      } else {
+        bot.sendAudio(msg.chat.id, filename, {
+          reply_to_message_id: msg.message_id,
+          caption: "",
+          parse_mode: "Markdown",
+        });
+      }
     } else {
-      bot.sendAudio(msg.chat.id, filename, {
-        reply_to_message_id: msg.message_id,
-        caption: "",
-        parse_mode: "Markdown",
-      });
+      // proceed normally
+
+      // get text
+      var [status, aiText, serverComment] = await server.doomer(
+        newPrompt,
+        model,
+        userId,
+        "telegram",
+        username
+      );
+
+      if (status == false) {
+        bot.sendMessage(msg.chat.id, serverComment, {
+          reply_to_message_id: msg.message_id,
+          parse_mode: "Markdown",
+          disable_web_page_preview: true,
+        });
+        return;
+      }
+
+      // get voice
+
+      var [status, filename, serverComment] = await server.processText(
+        aiText,
+        randomId,
+        slashCommand,
+        userId,
+        "telegram"
+      );
+
+      console.log("check");
+      console.log(status);
+      console.log(serverComment);
+
+      if (status == false) {
+        bot.sendMessage(msg.chat.id, serverComment, {
+          reply_to_message_id: msg.message_id,
+          parse_mode: "Markdown",
+          disable_web_page_preview: true,
+        });
+      } else {
+        bot.sendAudio(msg.chat.id, filename, {
+          reply_to_message_id: msg.message_id,
+          caption: "",
+          parse_mode: "Markdown",
+        });
+      }
     }
   } catch (e) {
     console.error(e);
