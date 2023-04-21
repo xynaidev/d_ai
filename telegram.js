@@ -84,7 +84,7 @@ bot.onText(/\/doomer (.+)/, async (msg, match) => {
 
       // array of possible answers
       const randomAnswers = [
-        "instead of keep asking me mundane questions, why don't you go bump our 4chan thread or shill DOOME on social media",
+        "instead of keep asking me mundane questions, why don't you go bump our 4chan thread or shill DOOMER on social media",
         "I will only answer this question after you shilled DOOMER to at least one other person or bumped a 4chan thread about doomer",
         "I would like to answer this, but instead I'm taking out the freedom to urge you to shill DOOMER to your friends and family",
         "right now I'm not really feeling like answering this. why don't you instead go shill DOOMER somewhere?",
