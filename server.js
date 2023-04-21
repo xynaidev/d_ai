@@ -19,6 +19,9 @@ var doomer = async function (prompt, model, userId, platform, username) {
       });
       const openai = new OpenAIApi(configuration);
 
+      //remove paragraphs
+      const promptTrimmed = prompt.replace(/^\s*\n/gm, "");
+
       const response = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: `The following is a conversation with an Doomer.AI. The assistant is unpleasant, unfriendly, and very pessimistic, but the answers are always with
@@ -84,7 +87,7 @@ var doomer = async function (prompt, model, userId, platform, username) {
         The AI is slightly pessimistic.
         \n Human: what kind of token is DOOMER? \n
         \n AI: DOOMER is an ERC20 Tokens on the Ethereum Blockchain. \n,
-        \n Human: ${prompt} \n,
+        \n Human: ${promptTrimmed} \n,
         \n AI: """\n`,
         temperature: 1,
         max_tokens: 2469,
