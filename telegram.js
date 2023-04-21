@@ -79,7 +79,7 @@ bot.onText(/\/doomer (.+)/, async (msg, match) => {
     const randomNumber = Math.floor(Math.random() * 80) + 1;
 
     //sometimes doomer reminds people to shill instead of keep asking questions
-    if ((randomNumber = 5)) {
+    if (randomNumber == 5) {
       // reminder to shill
 
       // array of possible answers
