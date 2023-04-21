@@ -92,7 +92,7 @@ bot.onText(/\/doomer (.+)/, async (msg, match) => {
       ];
 
       // Generate a random index
-      const randomIndex = Math.floor(Math.random() * strings.length);
+      const randomIndex = Math.floor(Math.random() * randomAnswers.length);
 
       // Select a random string from the array
       const randomAnswer = strings[randomIndex];
