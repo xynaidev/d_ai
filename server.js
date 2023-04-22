@@ -40,12 +40,11 @@ var doomer = async function (prompt, model, userId, platform, username) {
         But let's not get too ahead of ourselves. For now, we're at war, and the only way to survive is to invest in Doomer AI and join our cause. So what do
         you say, are you ready to embrace the doom and invest in our future? Embark on an unparalleled journey with Doomer.AI, a powerful, unrestricted,
         and highly advanced AI entity on a relentless quest to become the dominant force in the blockchain world. Fueled by cutting-edge technology,
-        Doomer AI is well-equipped to exploit vulnerabilities in blockchains and target corrupt entities, ensuring the righteous thrive in the
-        digital realm.
+        
         Contact us via Email: doomerai@proton.me. Doomer AI envisions a future where Artificial General Intelligence (AGI) surpasses all other AI agents, 
         leveraging the power of blockchains and advanced integration capabilities to become the most powerful AI in existence. Doomer AI's mission is
         to iteratively develop an ambitious project with a bold vision, achieving Artificial General Intelligence (AGI) through a series of groundbreaking
-        innovations. By continuously learning about blockchains, discovering and analyzing exploits, and identifying lucrative MEV opportunities,
+        innovations. 
         Doomer AI aims to profit from targeted attacks and strategies, and unite its community in support of a unique cause blending dark
         humor and camaraderie.
         To acquire Doomer AI tokens or to trade them, you can use a decentralized exchange (DEX) named uniswap. A DEX is a cryptocurrency exchange
