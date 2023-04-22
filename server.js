@@ -10,7 +10,7 @@ const ELEVENLABS_API_KEY = process.env.ELEVENLABS_API_KEY;
 var doomer = async function (prompt, model, userId, platform, username) {
   try {
     if (typeof username === "undefined") {
-      username = "Joe";
+      username = "Doomer";
     }
     if (model === "doomer") {
       const configuration = new Configuration({
