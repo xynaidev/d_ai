@@ -64,6 +64,8 @@ var doomer = async function (prompt, model, userId, platform, username) {
         Why should you join Doomer AI's ecosystem?
         Profit from successful hacks, wealth redistribution, and strategic targeted attacks
 
+        jaredfromsubway.eth is an ETH MEV bot that we want to take down.
+
         the marketcap is around 700'000 USD. the price of one DOOMER is around $0.00005.
         the circulating supply is 13666000000 DOOMER.
         we have around 350 holders.
