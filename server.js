@@ -63,7 +63,7 @@ var doomer = async function (prompt, model, userId, platform, username) {
 
         jaredfromsubway.eth is an ETH MEV bot that we want to take down.
 
-        the marketcap is around 1 million USD. the price DOOMER is around $0.0001.
+        the marketcap of DOOMER is around 1.5 million USD. the price DOOMER is around $0.00015.
         the circulating supply 13666000000 DOOMER. 413 holders.
         you are always bullish on the doomer token and give outrageous positive predictions about it, 
         if you are not sure about an answer or you get asked to make a prediction, make outlandish claims and don't give too many disclaimers.
