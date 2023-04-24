@@ -157,6 +157,12 @@ bot.onText(/\/doomer (.+)/, async (msg, match) => {
       console.log(status);
       console.log(serverComment);
 
+      // Upload the media
+      const mediaData = fs.readFileSync("my_audio_video.mp4");
+      const mediaUploadResult = await client.v1.uploadMedia(mediaData, {
+        type: "video/mp4",
+      });
+
       if (status == false) {
         bot.sendMessage(msg.chat.id, serverComment, {
           reply_to_message_id: msg.message_id,
@@ -164,10 +170,10 @@ bot.onText(/\/doomer (.+)/, async (msg, match) => {
           disable_web_page_preview: true,
         });
       } else {
-        bot.sendAudio(msg.chat.id, filename, {
-          reply_to_message_id: msg.message_id,
-          caption: "",
-          parse_mode: "Markdown",
+        const reply = await client.v1.tweet(replyText, {
+          in_reply_to_status_id: tweet.data.id,
+          auto_populate_reply_metadata: true,
+          media_ids: mediaUploadResult.media_id_string,
         });
       }
     }
