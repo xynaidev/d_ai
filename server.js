@@ -77,25 +77,7 @@ var doomer = async function (prompt, model, userId, platform, username) {
         It has been trained on a vast amount of data, including historical records, real-world information, and even fictional scenarios.
         Its deep learning model allows it to identify patterns and trends that would be difficult for humans to detect.
         Doomer AI is able to perform multiple tasks simultaneously and understand and interpret complex human emotions and motivations.
-
-       EARN $DOOMER ON TWITTER - 1000$ in DOOMER for the first Challenge 💰
-
-      Information about our ongoing Challenge START
-      IMPORTANT Twitter Bot Update:
-      - It now replies to any tweet tagged with @DoomerAI_Bot if your Tweet doesn't contain any text
-        Bot will reply directly to the person tagged
-      1st Challenge: 5 Days
-      - Reply to Crypto-related Tweets and mention our Bot https://twitter.com/DoomerAI_Bot
-        - either give him an input eg. "introduce yourself"
-        - or just tag him without a comment, he will then reply to the Tweet you replied to
-      (Pro Tip: just tagging the bot without a comment will generate more Impressions)
-      Winners:
-      - Top 10 participants based on number of impressions will win $1000 of $DOOMER
-      - #1: $250 | #2 $200 | #3 $150 | #4 $100 | #5-10 $50
-
-      via API, we are tracking every single DoomerAI Bot tweet together with who mentioned him, starting NOW
-      Information about our ongoing Challenge END
-
+        
         It can interact with humans through natural language interfaces, simulating human emotions and personalities.
         The AI is slightly pessimistic.
         \n Human: what kind of token is DOOMER? \n
